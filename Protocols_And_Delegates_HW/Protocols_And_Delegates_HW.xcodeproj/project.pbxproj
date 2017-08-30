@@ -13,6 +13,7 @@
 		328622001F5707E8008E0A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328621FE1F5707E8008E0A3E /* Main.storyboard */; };
 		328622021F5707E8008E0A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328622011F5707E8008E0A3E /* Assets.xcassets */; };
 		328622051F5707E8008E0A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328622031F5707E8008E0A3E /* LaunchScreen.storyboard */; };
+		3286220E1F5714DE008E0A3E /* ViewController_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3286220D1F5714DE008E0A3E /* ViewController_2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		328622011F5707E8008E0A3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		328622041F5707E8008E0A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		328622061F5707E8008E0A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3286220C1F5714DE008E0A3E /* ViewController_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_2.h; sourceTree = "<group>"; };
+		3286220D1F5714DE008E0A3E /* ViewController_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_2.m; sourceTree = "<group>"; };
+		3286220F1F5716AB008E0A3E /* ViewControllersProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllersProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				328621F91F5707E8008E0A3E /* AppDelegate.m */,
 				328621FB1F5707E8008E0A3E /* ViewController.h */,
 				328621FC1F5707E8008E0A3E /* ViewController.m */,
+				3286220C1F5714DE008E0A3E /* ViewController_2.h */,
+				3286220D1F5714DE008E0A3E /* ViewController_2.m */,
 				328621FE1F5707E8008E0A3E /* Main.storyboard */,
 				328622011F5707E8008E0A3E /* Assets.xcassets */,
 				328622031F5707E8008E0A3E /* LaunchScreen.storyboard */,
@@ -74,6 +80,7 @@
 		328621F51F5707E8008E0A3E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3286220F1F5716AB008E0A3E /* ViewControllersProtocol.h */,
 				328621F61F5707E8008E0A3E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -152,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				328621FD1F5707E8008E0A3E /* ViewController.m in Sources */,
+				3286220E1F5714DE008E0A3E /* ViewController_2.m in Sources */,
 				328621FA1F5707E8008E0A3E /* AppDelegate.m in Sources */,
 				328621F71F5707E8008E0A3E /* main.m in Sources */,
 			);

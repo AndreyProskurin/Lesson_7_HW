@@ -1,26 +1,163 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Способ оплаты: не выбран" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ura-Yp-URo">
+                                <rect key="frame" x="20" y="105" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.99990803003311157" green="0.96534007787704468" blue="0.61446446180343628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M1U-Ld-S9T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-aG-K1B">
+                                <rect key="frame" x="36" y="264" width="248" height="40"/>
+                                <color key="backgroundColor" red="0.37112996744223481" green="1" blue="0.60124261982187366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yRf-k7-zkb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Выбрать способ оплаты">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SyG-dm-I8V" kind="show" identifier="segue_1" id="SZ0-i0-3RD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96425732112125939" blue="0.61545047758147897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="n6K-aG-K1B" secondAttribute="trailing" constant="20" id="2bU-4m-MYa"/>
+                            <constraint firstItem="n6K-aG-K1B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ITh-Wi-ucx"/>
+                            <constraint firstItem="ura-Yp-URo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="N2w-m5-e0P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ura-Yp-URo" secondAttribute="trailing" constant="4" id="mva-0y-nYp"/>
+                            <constraint firstItem="n6K-aG-K1B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rLq-yr-y1a"/>
+                            <constraint firstItem="ura-Yp-URo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="xOg-Fw-cLb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="paymentMethodTextLabel" destination="ura-Yp-URo" id="PYE-gU-aom"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.25" y="122.53521126760563"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="gZt-K1-Ttk">
+            <objects>
+                <viewController storyboardIdentifier="ViewController_2" id="SyG-dm-I8V" customClass="ViewController_2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6Z-j2-NKk"/>
+                        <viewControllerLayoutGuide type="bottom" id="DRq-vK-Poo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IaB-KW-2ev">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzg-1d-lAO">
+                                <rect key="frame" x="95.5" y="508" width="130" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackButtonAction:" destination="SyG-dm-I8V" eventType="touchUpInside" id="drl-MU-jDU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEa-lC-0Fi">
+                                <rect key="frame" x="95" y="139" width="130" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="VISA">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PaymentMethodButtonAction:" destination="SyG-dm-I8V" eventType="touchUpInside" id="aRN-hd-b65"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teT-CF-xNY">
+                                <rect key="frame" x="95" y="259" width="130" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="PayPal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PaymentMethodButtonAction:" destination="SyG-dm-I8V" eventType="touchUpInside" id="v7U-zZ-15C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-nf-6KT">
+                                <rect key="frame" x="95" y="199" width="130" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="4w8-Cz-R15"/>
+                                    <constraint firstAttribute="height" constant="40" id="PdT-Xk-VOf"/>
+                                </constraints>
+                                <state key="normal" title="Master Card">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PaymentMethodButtonAction:" destination="SyG-dm-I8V" eventType="touchUpInside" id="3KS-9y-va8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpZ-zu-YVK">
+                                <rect key="frame" x="95" y="319" width="130" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Web Money">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PaymentMethodButtonAction:" destination="SyG-dm-I8V" eventType="touchUpInside" id="CHp-q0-aWb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61186773821517781" green="1" blue="0.71497800422362789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NpZ-zu-YVK" firstAttribute="centerX" secondItem="IaB-KW-2ev" secondAttribute="centerX" id="52Z-xE-kPI"/>
+                            <constraint firstItem="teT-CF-xNY" firstAttribute="top" secondItem="3qb-nf-6KT" secondAttribute="bottom" constant="20" id="6mm-ei-lVq"/>
+                            <constraint firstItem="DRq-vK-Poo" firstAttribute="top" secondItem="Mzg-1d-lAO" secondAttribute="bottom" constant="20" id="C0L-Ee-oal"/>
+                            <constraint firstItem="XEa-lC-0Fi" firstAttribute="height" secondItem="3qb-nf-6KT" secondAttribute="height" id="DIF-T1-9Bl"/>
+                            <constraint firstItem="Mzg-1d-lAO" firstAttribute="width" secondItem="3qb-nf-6KT" secondAttribute="width" id="MdS-J9-ZW3"/>
+                            <constraint firstItem="XEa-lC-0Fi" firstAttribute="width" secondItem="3qb-nf-6KT" secondAttribute="width" id="Ve0-NB-gtu"/>
+                            <constraint firstItem="teT-CF-xNY" firstAttribute="centerX" secondItem="IaB-KW-2ev" secondAttribute="centerX" id="Wg7-Zd-wIT"/>
+                            <constraint firstItem="teT-CF-xNY" firstAttribute="height" secondItem="3qb-nf-6KT" secondAttribute="height" id="X3o-pd-VjM"/>
+                            <constraint firstItem="XEa-lC-0Fi" firstAttribute="centerX" secondItem="IaB-KW-2ev" secondAttribute="centerX" id="Xs6-g0-jlz"/>
+                            <constraint firstItem="Mzg-1d-lAO" firstAttribute="centerX" secondItem="NpZ-zu-YVK" secondAttribute="centerX" id="Yxy-69-DrF"/>
+                            <constraint firstItem="NpZ-zu-YVK" firstAttribute="width" secondItem="3qb-nf-6KT" secondAttribute="width" id="Zkg-Kw-P0M"/>
+                            <constraint firstItem="NpZ-zu-YVK" firstAttribute="height" secondItem="3qb-nf-6KT" secondAttribute="height" id="adN-Gd-epB"/>
+                            <constraint firstItem="Mzg-1d-lAO" firstAttribute="height" secondItem="3qb-nf-6KT" secondAttribute="height" id="ctP-4q-Cwu"/>
+                            <constraint firstItem="3qb-nf-6KT" firstAttribute="centerX" secondItem="IaB-KW-2ev" secondAttribute="centerX" id="efa-Vl-D5R"/>
+                            <constraint firstItem="NpZ-zu-YVK" firstAttribute="top" secondItem="teT-CF-xNY" secondAttribute="bottom" constant="20" id="jBG-7n-25P"/>
+                            <constraint firstItem="teT-CF-xNY" firstAttribute="width" secondItem="3qb-nf-6KT" secondAttribute="width" id="kdJ-dZ-c5A"/>
+                            <constraint firstItem="3qb-nf-6KT" firstAttribute="top" secondItem="XEa-lC-0Fi" secondAttribute="bottom" constant="20" id="zph-Ot-chD"/>
+                            <constraint firstItem="XEa-lC-0Fi" firstAttribute="top" secondItem="b6Z-j2-NKk" secondAttribute="bottom" constant="119" id="ztt-Uk-XTc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bta-Uc-XFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="123"/>
         </scene>
     </scenes>
 </document>

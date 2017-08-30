@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "ViewController_2.h"
+#import "ViewControllersProtocol.h"
 
-@interface ViewController ()
+@interface ViewController () <ViewControllersProtocol>
+
+@property (weak, nonatomic) IBOutlet UILabel *paymentMethodTextLabel;
 
 @end
 
@@ -16,14 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ViewController_2 *viewController_2 = segue.destinationViewController;
+    viewController_2.delegate = self;
 }
 
+#pragma mark - ViewControllersProtocol -
+
+- (void)changePaymentMethodName:(NSString *)paymentMethodName {
+    self.paymentMethodTextLabel.text = [NSString stringWithFormat:@"Способ оплаты: %@", paymentMethodName];
+}
 
 @end
