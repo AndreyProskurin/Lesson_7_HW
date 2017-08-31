@@ -11,5 +11,8 @@
 @protocol ViewControllersProtocol <NSObject>
 
 - (void)changePaymentMethodName:(NSString *)paymentMethodName;
+- (void)confirmClientName:(NSString *)clientName;
+- (void)chooseMenuName:(NSString *)menuName;
+- (void)addSpices:(NSString *)spices;
 
 @end
