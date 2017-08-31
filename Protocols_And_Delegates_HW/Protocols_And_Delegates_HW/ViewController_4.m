@@ -11,6 +11,8 @@
 
 @interface ViewController_4 ()
 
+@property (weak, nonatomic) IBOutlet UISwitch *additionSpicesSwitchOutlet;
+
 @end
 
 @implementation ViewController_4
@@ -24,12 +26,19 @@
 }
 
 - (IBAction)chooseMenuButtonAction:(UIButton *)sender {
-    [self.delegate chooseMenuName:sender.currentTitle];
-    [self dismissViewControllerAnimated:YES completion:nil];
     
+    if ([self.additionSpicesSwitchOutlet isOn]) {
+        [self.delegate chooseMenuName:sender.currentTitle];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self.delegate addSpices:@"Нет"];
+        [self.delegate chooseMenuName:sender.currentTitle];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (IBAction)addSpicesSwitcherAction:(UISwitch *)sender {
+    
     if ([sender isOn]) {
         [self.delegate addSpices:@"Да"];
         [sender setOn:YES];

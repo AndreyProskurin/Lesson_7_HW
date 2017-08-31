@@ -446,6 +446,9 @@
                             <constraint firstItem="CtT-Q8-fPA" firstAttribute="height" secondItem="xbP-d2-96G" secondAttribute="height" id="zFU-K4-cr2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="additionSpicesSwitchOutlet" destination="Vcr-GU-zbB" id="CFL-g0-e7F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTO-xw-kYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
